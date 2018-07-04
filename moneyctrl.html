@@ -5,48 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="./lib/Awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/moneyctrl.css">
 </head>
 <body>
   <div class="container">
 
     <!-- 头部区域 -->
     <div class="mm-header">
-      <div class="top">
-        <a href="index.html" class="logo">
-          <img src="./images/header_logo.png" alt="">
+      <div class="left">
+        <a href="javascript:history.go(-1);">
+          <img src="./images/right.svg" alt="">
         </a>
-        <a href="javascript:;" class="app">
+      </div>
+      <div class="center">
+        <p>省钱控-最新优惠</p>
+      </div> 
+      <div class="right"> 
+        <a href="javascript:;">
           <img src="./images/header_app.png" alt="">
         </a>
       </div>
-      <div class="search">
-        <input type="text" placeholder="请输入你想比价的商品">
-        <input type="button" value="搜索">
-      </div>
     </div>
 
-    <!-- 菜单导航区域 -->
-    <div class="mm-nav">
-      <ul class="clearfix">
-        <!-- 菜单项 -->
-      </ul>
-    </div>
-
-    <!-- 折扣商品区域 -->
-    <div class="mm-recommend">
-      <div class="head">
-        <h3>超值折扣推荐</h3>
-        <img src="./images/more.png" alt="">
-      </div>
+    <!-- 主题内容部分 -->
+    <div class="mm-main">
       <div class="mm-product">
         <ul>
-          <!-- 折扣商品详情 -->
+          <!-- 商品列表 -->
         </ul>
       </div>
-      <div class="bottom">
-        <h3>品牌排行</h3>
-        <img src="./images/more.png" alt="">
+      <div class="main-pagination">
+        <button class="prev fl">上一页</button>
+        <button class="next fr">下一页</button>
+        <select id="select">
+          <!-- options -->
+        </select>
       </div>
     </div>
 
@@ -73,25 +67,13 @@
   <script src="./lib/jquery/jquery.min.js"></script>
   <script src="./lib/artTemplate/template.js"></script>
   <script src="./js/common.js"></script>
-  <script src="./js/index.js"></script>
+  <script src="./js/moneyctrl.js"></script>
 
-  <!-- 设置菜单导航模板 -->
-  <script type="text/html" id="navTpl">
+   <!-- 设置商品列表模板 -->
+   <script type="text/html" id="listTpl">
     {{ each result as v i }}
       <li>
-        <a href="{{ v.titlehref }}">
-          {{ #v.img }}
-          <p>{{ v.name }}</p>
-        </a>
-      </li>
-    {{ /each }}
-  </script>
-
-  <!-- 设置折扣商品模板 -->
-  <script type="text/html" id="productTpl">
-    {{ each result as v i }}
-      <li>
-        <a href="#">
+        <a data-id="{{ v.productId }}" href="#">
           <div class="left">
             {{ #v.productImg2 }}
           </div>
@@ -108,5 +90,13 @@
       </li>
     {{ /each }}
   </script>
+
+  <!-- 设置下拉列表模板 -->
+  <script type="text/html" id="selectTpl">
+    {{ each arr as v i }}
+      <option {{ pageId === v ? 'selected' : '' }} value="{{ v }}">{{ v }} / {{ page }}</option>
+    {{ /each }}
+  </script>
+ 
 </body>
 </html>

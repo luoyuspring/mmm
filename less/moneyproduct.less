@@ -1,0 +1,130 @@
+@charset 'utf-8';
+
+@import 'moneyctrl.less';
+
+.mm-main {
+  background-color: #fff;
+}
+
+/* 产品详情样式 */
+.main-product {
+  .content {
+    padding: 0.4rem;
+
+    p:nth-child(1) {
+      font-size: 0.72rem;
+      font-weight: bold;
+      line-height: 1.6rem;
+    }
+    p:nth-child(2) {
+      font-size: 0.44rem;
+      line-height: 1.2rem;
+      color: #ccc;
+      margin-bottom: 0.6rem;
+    }
+    img:nth-child(3) {
+      width: 5rem;
+      height: 5rem;
+      float: right;
+    }
+    p:nth-child(4) {
+      font-size: 0.6rem;
+      line-height: 1.2rem;
+    }
+    img:nth-child(5) {
+      width: 10rem;
+      height: 10rem;
+      margin: 0 auto;
+    }
+  }
+  .button {
+    padding: 0.8rem;
+    button { 
+      width: 100%;
+      height: 1.2rem;
+      font-size: 0.56rem;
+      color: #fff;
+      background-color: @mmColor;
+      border-radius: 0.4rem;
+    }
+  }
+}
+
+/* 消息框样式 */
+.main-info {
+  width: 100%;
+  padding: 0.4rem;
+}
+
+/* 评论区域样式 */
+.main-comment {
+  padding: 0.4rem;
+  .tit {
+    font-size: 0.6rem;
+    line-height: 1.6rem;
+  }
+  .reply {
+    textarea {
+      width: 100%;
+      height: 4.4rem;
+      font-size: 0.48rem;
+      padding: 0.4rem;
+      border: 1px solid @mmBorder;
+    }
+    .ctrl {
+      height: 1.6rem;
+
+      input {
+        float: right;
+        width: 4rem;
+        height: 1.6rem;
+        background-color: @mmColor;
+        border-radius: 0.4rem;
+      }
+    }
+  }
+  .list {
+    li {
+      position: relative;
+      padding-left: 2rem;
+      padding-bottom: 0.4rem;
+      padding-top: 0.4rem;
+      border-bottom: 1px solid #ccc;
+      &:last-child {
+        border: none;
+      }
+
+      .userimg {
+        width: 1.6rem;
+        height: 1.6rem;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+        }
+      }
+      .con {
+        .name {
+          padding-bottom: 0.1rem;
+          .username {
+            float: left;
+            font-size: 0.3rem;
+            color: #007acc;
+          }
+          .time {
+            float: right;
+            font-size: 0.3rem;
+          }
+        }
+        .content {
+          font-size: 0.3rem;
+          line-height: 0.5rem;
+        }
+      }
+    }
+  }
+}

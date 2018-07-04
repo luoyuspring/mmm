@@ -17,7 +17,7 @@ $(function () {
     url : 'http://127.0.0.1:9090/api/getmoneyctrl',
     dataType : 'json',
     success : function (info) {
-      $('.mm-recommend .product ul').html(template('productTpl', info));
+      $('.mm-recommend .mm-product ul').html(template('productTpl', info));
     }
   })
 

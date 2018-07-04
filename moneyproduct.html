@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./lib/Awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/moneyproduct.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- 头部区域 -->
+    <div class="mm-header">
+      <div class="left">
+        <a href="javascript:history.go(-1);">
+          <img src="./images/right.svg" alt="">
+        </a>
+      </div>
+      <div class="center">
+        <p>国内折扣</p>
+      </div> 
+      <div class="right"> 
+        <a href="javascript:;">
+          <img src="./images/header_app.png" alt="">
+        </a>
+      </div>
+    </div>
+
+    <!-- 主题内容部分 -->
+    <div class="mm-main">
+      <!-- 内容通过模板动态渲染 -->
+    </div>
+
+    <!-- 底部区域 -->
+    <div class="mm-footer">
+      <div class="top">
+        <ul class="clearfix">
+          <li><a href="javascript:;">登录</a></li>
+          <li><a href="javascript:;">注册</a></li>
+          <li><a id="back" href="javascript:;"><img src="./images/top.jpg" alt="">返回顶部</a></li>
+        </ul>
+      </div>
+      <div class="bottom">
+        <p>
+          <a href="">手机APP下载</a>
+          <a href="">慢慢买手机版</a>
+          --掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/artTemplate/template.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/moneyproduct.js"></script>
+
+  <!-- 设置主题内容模板 -->
+  <script type="text/html" id="tpl">
+    {{ each result as v i }}
+    <!-- 产品详情 -->
+    <div class="main-product">
+      <div class="content">
+        <p>{{ v.productName }}</p>
+        <p>
+          <span>{{ v.productFrom }}</span>
+          <span>{{ v.productTime }}</span>
+          <span>{{ v.productTips }}</span>
+        </p>
+        {{ #v.productImgSm }}
+        <p>{{ v.productInfo2 }}</p>
+        {{ #v.productImg2 }}
+      </div>
+      <div class="city">
+        {{ v.productCity }}
+      </div>
+      <div class="button">
+        <button>前往购买</button>
+      </div>
+    </div>
+    <!-- 消息框 -->
+    <div class="main-info">
+      <img src="./images/mmbweixin2.png" alt="">
+    </div>
+    <!-- 评论展示 -->
+    <div class="main-comment">
+      {{ #v.productComment }}
+    </div>
+    {{ /each }}
+  </script>
+ 
+</body>
+</html>
