@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./lib/Awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/productDefult.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- 头部区域 -->
+    <div class="mm-header">
+      <div class="top">
+        <a href="index.html" class="logo">
+          <img src="./images/header_logo.png" alt="">
+        </a>
+        <a href="javascript:;" class="app">
+          <img src="./images/header_app.png" alt="">
+        </a>
+      </div>
+      <div class="search">
+        <input type="text" placeholder="请输入你想比价的商品">
+        <input type="button" value="搜索">
+      </div>
+    </div>
+
+    <!-- 主题内容部分 -->
+    <div class="mm-main">
+      <!-- 导航 -->
+      <div class="main-nav">
+        <a href="index.html">首页</a>
+        &gt;
+        <a class="category" href="#"></a>
+        &gt;
+        <a class="brandName" href="javascript:;"></a>
+        &gt;
+        <button>筛选</button>
+      </div>
+      <!-- 商品详情 -->
+      <div class="main-defult">
+        <div class="top">
+          <!-- 产品信息 -->
+        </div>
+        <div class="center">
+          <ul>
+            <li><a href="#">比价购买</a></li>
+            <li><a href="#">产品参数</a></li>
+            <li><a href="#">评价(1111)</a></li>
+          </ul>
+        </div>
+        <div class="bottom">
+          <div class="info">
+            <img src="./images/slogo.png" alt="">
+            <span>京东商城</span>
+            <span>去购买</span>
+            <span>¥1999.00</span>
+          </div>
+          <div class="tips">
+            <p>*实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 评论部分 -->
+      <div class="main-comment">
+        <div class="title">网友评价</div>  
+        <div class="content">
+          <!-- 评论信息 -->
+        </div>
+        <button class="more">查看跟多评论</button>  
+      </div>
+      
+    </div>
+
+    <!-- 底部区域 -->
+    <div class="mm-footer">
+      <div class="top">
+        <ul class="clearfix">
+          <li><a href="javascript:;">登录</a></li>
+          <li><a href="javascript:;">注册</a></li>
+          <li><a id="back" href="javascript:;"><img src="./images/top.jpg" alt="">返回顶部</a></li>
+        </ul>
+      </div>
+      <div class="bottom">
+        <p>
+          <a href="">手机APP下载</a>
+          <a href="">慢慢买手机版</a>
+          --掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/artTemplate/template.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/productDefult.js"></script>
+
+  <!-- 设置产品信息模板 -->
+  <script type="text/html" id="productTpl">
+    {{ each result as v i }}
+      <p>{{ v.productName }}</p>
+      {{ #v.productImg }}
+    {{ /each }}
+  </script>
+
+  <!-- 设置评论信息模板 -->
+  <script type="text/html" id="commentTpl">
+    {{ each result as v i }}
+      <div class="info">
+        <p>
+          <span class="fl">{{ v.comName }}</span>
+          <span class="fr">{{ v.comTime }}</span>
+        </p>
+        <p>{{ v.comFrom }}</p>
+        <p>{{ v.comContent }}</p>
+      </div>
+    {{ /each }}
+  </script>
+ 
+</body>
+</html>

@@ -17,7 +17,21 @@ $(function () {
   responsive();
   window.addEventListener("resize", responsive);
 
-
-  // 功能二: 
+  // 功能二: 点击返回顶部按钮返回顶部
+  $('#back').on('click', function(){
+    $('html,body').animate({
+      scrollTop : 0
+    }, 500)
+  })
 
 });
+
+// 功能三: 解析地址栏字符串方法封装
+function getSearch(name) {
+  var arr = decodeURI(location.search).slice(1).split('&');
+  var obj = {};
+  arr.forEach(function (v, i) {
+    obj[v.split('=')[0]] = v.split('=')[1];
+  })
+  return obj[name];
+}

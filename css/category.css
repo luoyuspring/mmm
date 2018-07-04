@@ -228,8 +228,7 @@ img {
   width: 100%;
   display: block;
 }
-input,
-button {
+input {
   outline: none;
   border: 0.02rem solid transparent;
 }
@@ -343,24 +342,44 @@ button {
 .mm-footer .bottom p:first-child a:nth-child(2) {
   color: #000;
 }
-/* 主要内容区域导航公共部分 */
-.main-nav {
+.mm-main {
+  width: 100%;
+  padding-bottom: 1rem;
+  background-color: #fff;
+}
+.mm-main .main-title {
   width: 100%;
   height: 1.6rem;
+  background-color: #f5f5f5;
   line-height: 1.6rem;
-  position: relative;
-  font-size: 0.56rem;
-  border-top: 0.02rem solid #ccc;
-  background-image: linear-gradient(to bottom, #fff, #ebebeb);
-  padding-left: 0.4rem;
-}
-.main-nav button {
-  width: 2.4rem;
-  height: 1rem;
-  line-height: 1rem;
-  box-shadow: 0.04rem 0.04rem 0.04rem 0.04rem #666;
   border-radius: 0.2rem;
-  position: absolute;
-  right: 0.4rem;
-  top: 0.3rem;
+}
+.mm-main .main-title h3 {
+  font-size: 0.6rem;
+  padding-left: 0.4rem;
+  float: left;
+}
+.mm-main .main-title i {
+  font-size: 0.6rem;
+  color: #ccc;
+  font-weight: normal;
+  line-height: 1.6rem;
+  padding-right: 0.4rem;
+}
+.mm-main .main-list {
+  width: 100%;
+  border: 0.02rem solid #ccc;
+  border-bottom: none;
+}
+.mm-main .main-list li {
+  width: 33.33333333%;
+  height: 1.6rem;
+  float: left;
+  line-height: 1.56rem;
+  border-bottom: 0.02rem solid #ccc;
+  border-right: 0.02rem solid #ccc;
+  text-align: center;
+}
+.mm-main .main-list li a {
+  display: block;
 }

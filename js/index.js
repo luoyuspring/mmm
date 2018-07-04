@@ -26,11 +26,5 @@ $(function () {
     $(this).find('a').attr('href', 'javascript:;');    
     $(this).nextAll().slideToggle();
   })
-
-  // 功能三: 点击返回顶部按钮返回顶部
-  $('#back').on('click', function(){
-    $('html,body').animate({
-      scrollTop : 0
-    }, 500)
-  })
+  
 });

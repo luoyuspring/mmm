@@ -364,3 +364,144 @@ button {
   right: 0.4rem;
   top: 0.3rem;
 }
+/* 商品详情 */
+.main-defult {
+  width: 100%;
+  background-color: #fff;
+}
+.main-defult .top {
+  height: 10rem;
+  padding: 0.8rem;
+  text-align: center;
+  font-size: 0.6rem;
+  position: relative;
+}
+.main-defult .top::before {
+  content: '收藏';
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  text-align: center;
+  color: #fff;
+  font-size: 0.48rem;
+  border-radius: 50%;
+  background-color: #95d700;
+}
+.main-defult .top img {
+  width: 6rem;
+  height: 5rem;
+  margin: 0 auto;
+  margin-top: 0.6rem;
+}
+.main-defult .center {
+  width: 100%;
+  height: 1.32rem;
+  border-top: 1px solid #ff841d;
+  border-bottom: 1px solid #ff841d;
+}
+.main-defult .center li {
+  width: 33.33333333%;
+  float: left;
+}
+.main-defult .center li:nth-child(2) {
+  border-left: 1px solid #ff841d;
+  border-right: 1px solid #ff841d;
+}
+.main-defult .center li:first-child {
+  background-color: #ff9d1c;
+}
+.main-defult .center li:not(first-child) {
+  background-color: #ffc935;
+}
+.main-defult .center li a {
+  width: 100%;
+  height: 1.32rem;
+  line-height: 1.32rem;
+  text-align: center;
+  display: block;
+  font-size: 0.56rem;
+  color: #fff;
+}
+.main-defult .bottom .info {
+  height: 1.8rem;
+  line-height: 1.8rem;
+  padding: 0 0.2rem;
+  font-size: 0.6rem;
+  border-bottom: 1px solid #ccc;
+}
+.main-defult .bottom .info img {
+  float: left;
+  width: 0.6rem;
+  height: 0.6rem;
+  margin-top: 0.6rem;
+}
+.main-defult .bottom .info span:nth-child(2) {
+  float: left;
+  padding-left: 0.2rem;
+}
+.main-defult .bottom .info span:nth-child(3) {
+  width: 2.4rem;
+  height: 1rem;
+  text-align: center;
+  color: #fff;
+  line-height: 1rem;
+  margin-top: 0.4rem;
+  border-radius: 0.2rem;
+  background-color: #ff841d;
+  float: right;
+}
+.main-defult .bottom .info span:nth-child(4) {
+  padding-right: 0.4rem;
+  color: red;
+  float: right;
+}
+.main-defult .bottom .tips {
+  height: 2.4rem;
+  padding-top: 0.2rem;
+  padding-left: 20px;
+  border-bottom: 0.1rem solid #666;
+}
+.main-defult .bottom .tips p {
+  font-size: 0.48rem;
+  line-height: 0.8rem;
+  color: #666;
+}
+/* 评论部分 */
+.main-comment .title {
+  height: 1.2rem;
+  line-height: 1.2rem;
+  text-align: center;
+  font-size: 0.6rem;
+}
+.main-comment .content .info {
+  padding: 0.4rem;
+  font-size: 0.44rem;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+}
+.main-comment .content .info p:nth-child(1) {
+  color: #666;
+  height: 0.8rem;
+}
+.main-comment .content .info p:nth-child(2) {
+  line-height: 0.8rem;
+  text-align: right;
+  padding-bottom: 0.4rem;
+  color: #666;
+}
+.main-comment .content .info p:nth-child(3) {
+  line-height: 0.8rem;
+  text-indent: 2em;
+}
+.main-comment .content .more {
+  width: 14.2rem;
+  height: 1.2rem;
+  display: block;
+  font-size: 0.6rem;
+  margin: 0.4rem auto;
+  border-radius: 20px;
+  box-shadow: 1px 1px 1px 1px #666;
+}
