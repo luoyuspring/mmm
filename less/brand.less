@@ -1,0 +1,203 @@
+@charset 'utf-8';
+
+@import 'common.less';
+
+.mm-main {
+  background-color: #fff;
+  padding-bottom: 1rem;
+}
+
+/* 主题头部样式 */
+.main-nav {
+  height: 1.5rem;
+  line-height: 1.5rem;
+  border-top: 0.02rem solid @mmBorder;
+  border-bottom: 0.02rem solid @mmBorder;
+  font-size: 0.6rem;
+  background-image: linear-gradient(to bottom, #fff, #ddd);
+
+  a {
+    color: #000;
+  }
+}
+
+/* 主题标题样式 */
+.main-title {
+  height: 1.5rem;
+  line-height: 1.5rem;
+  padding-left: 0.4rem;
+  border: 0.02rem solid @mmBorder;
+  background-color: #eee;
+  font-size: 0.6rem;
+  color: @mmColor;
+}
+
+/* 主题品牌排行样式 */
+.main-brand {
+  li {
+    width: 100%;
+    height: 2.6rem;
+    padding: 0.4rem;
+    border-bottom: 0.02rem solid @mmBorder;
+
+    a {
+      width: 100%;
+      display: block;
+      height: 2rem;
+      position: relative;
+      padding-left: 1.2rem;
+
+      .left {
+        width: 0.8rem;
+        height: 0.8rem;
+        line-height: 0.8rem;
+        text-align: center;
+        color: #fff;
+        font-weight: bold;
+        font-size: 0.48rem;
+        background-color: #c9c9c9;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .right {
+        width: 100%;
+        height: 1.8rem;
+        line-height: 0.9rem;
+
+        p:first-child {
+          font-size: 0.6rem;
+          color: #000;
+        }
+        p:last-child {
+          font-size: 0.48rem;
+          color: #666;
+        }
+      }
+      img {
+        width: 0.7rem;
+        height: 0.7rem;
+        position: absolute;
+        right: 0;
+        top: 0.6rem;
+      }
+    }
+  }
+}
+
+/* 主题销量排行样式 */
+.main-sell {
+  li {
+    width: 100%;
+    height: 4.8rem;
+    padding: 0.4rem;
+
+    a {
+      width: 100%;
+      height: 2rem;
+      display: block;
+      position: relative;
+      padding-left: 4.4rem;
+
+      .left {
+        width: 4rem;
+        height: 4rem;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .right {
+        width: 100%;
+        height: 100%;
+
+        p:nth-child(1) {
+          color: #000;
+          font-size: 0.48rem;
+          line-height: 1rem;
+        }
+        p:nth-child(2) {
+          color: @mmColor;
+          font-size: 0.56rem;
+          line-height: 1.2rem;
+        }
+        p:nth-child(3) {
+          color: #666;
+          font-size: 0.4rem;
+
+          span {
+            padding-right: 0.4rem;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+/* 主题评论样式 */
+.main-comment {
+  padding: 0.4rem;
+
+  .top {
+    width: 100%;
+    height: 4rem;
+    position: relative;
+    padding-left: 4.4rem;
+    padding-top: 0.4rem;
+
+    img {
+      width: 4rem;
+      height: 4rem;
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    p {
+      width: 100%;
+      font-size: 0.52rem;
+      color: #666;
+    }
+  }
+  .comment {
+    padding: 0.4rem;
+    border: 0.02rem solid @mmBorder;
+    position: relative;
+    &::before {
+      content: '';
+      width: 0.6rem;
+      height: 0.6rem;
+      border-left: 0.02rem solid @mmBorder;
+      border-top: 0.02rem solid @mmBorder;
+      background: #fff;
+      position: absolute;
+      left: 1rem;
+      top: -0.34rem;
+      transform: rotate(45deg);
+    }
+
+    p:nth-child(1) {
+      height: 1.2rem;
+      font-size: 0.4rem;
+      line-height: 1.2rem;
+      color: #666;
+
+      span:first-child {
+        float: left;
+      }
+      span:last-child {
+        float: right;
+      }
+    }
+    p:nth-child(2) {
+      line-height: 0.9rem;
+      font-size: 0.52rem;
+      color: #000;
+    }
+  }
+}

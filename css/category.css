@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 body {
-  font-size: 14px;
+  font-size: 0.28rem;
   font-family: 'Microsoft YaHei', sans-serif;
   background-color: #f5f5f5;
 }
@@ -228,7 +228,8 @@ img {
   width: 100%;
   display: block;
 }
-input {
+input,
+button {
   outline: none;
   border: 0.02rem solid transparent;
 }
@@ -245,8 +246,8 @@ input {
 }
 .container {
   width: 100%;
-  max-width: 750px;
-  min-width: 320px;
+  max-width: 15rem;
+  min-width: 6.4rem;
   margin: 0 auto;
   background-color: #f1f1f1;
 }
@@ -282,14 +283,17 @@ input {
 .mm-header .search input:first-child {
   width: 11.4rem;
   height: 1.2rem;
-  padding-left: 0.4rem;
+  padding-left: 0.5rem;
   font-size: 0.52rem;
   border-radius: 0.6rem;
+  float: left;
   background-color: #f1f1f1;
 }
 .mm-header .search input:last-child {
   width: 2.5rem;
   height: 1.2rem;
+  float: left;
+  margin-left: 0.2rem;
   border-radius: 0.6rem;
   background-color: #ff841d;
 }
@@ -328,7 +332,7 @@ input {
   height: 0.6rem;
 }
 .mm-footer .bottom {
-  height: 130px;
+  height: 2.6rem;
   text-align: center;
   font-size: 0.48rem;
   padding-top: 0.5rem;
@@ -341,6 +345,95 @@ input {
 }
 .mm-footer .bottom p:first-child a:nth-child(2) {
   color: #000;
+}
+/* 主要内容区域导航公共部分 */
+.main-nav {
+  width: 100%;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  position: relative;
+  font-size: 0.56rem;
+  border-top: 0.02rem solid #ccc;
+  background-image: linear-gradient(to bottom, #fff, #ebebeb);
+  padding-left: 0.4rem;
+}
+.main-nav button {
+  width: 2.4rem;
+  height: 1rem;
+  line-height: 1rem;
+  box-shadow: 0.04rem 0.04rem 0.04rem 0.04rem #666;
+  border-radius: 0.2rem;
+  position: absolute;
+  right: 0.4rem;
+  top: 0.3rem;
+}
+/* 商品列表区域公共样式 */
+.mm-product {
+  width: 100%;
+  background-color: #fff;
+}
+.mm-product li {
+  width: 100%;
+  height: 5.2rem;
+  padding: 0.2rem 0.4rem;
+  border-bottom: 0.02rem solid #ccc;
+}
+.mm-product li:last-child {
+  border: none;
+}
+.mm-product li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding-left: 4.2rem;
+  position: relative;
+}
+.mm-product li a .left {
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  left: 0;
+  top: 0.4rem;
+}
+.mm-product li a .right {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.mm-product li a .right .right-title {
+  font-size: 0.56rem;
+  color: #000;
+}
+.mm-product li a .right .right-title span {
+  color: #ff841d;
+}
+.mm-product li a .right .right-footer {
+  width: 100%;
+  height: 1.6rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+/* 分页部分公共样式 */
+.main-pagination {
+  width: 100%;
+  height: 2rem;
+  padding: 0.4rem;
+  font-size: 0.48rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.main-pagination button {
+  width: 3.2rem;
+  height: 1.2rem;
+  background-image: linear-gradient(to bottom, #fff, #ccc);
+  border-radius: 0.2rem;
+  box-shadow: 0.02rem 0.02rem 0.02rem 0.02rem #666;
+}
+.main-pagination #select {
+  width: 3.2rem;
+  height: 1.2rem;
+  padding-left: 0.8rem;
 }
 .mm-main {
   width: 100%;

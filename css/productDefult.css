@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 body {
-  font-size: 14px;
+  font-size: 0.28rem;
   font-family: 'Microsoft YaHei', sans-serif;
   background-color: #f5f5f5;
 }
@@ -246,8 +246,8 @@ button {
 }
 .container {
   width: 100%;
-  max-width: 750px;
-  min-width: 320px;
+  max-width: 15rem;
+  min-width: 6.4rem;
   margin: 0 auto;
   background-color: #f1f1f1;
 }
@@ -283,14 +283,17 @@ button {
 .mm-header .search input:first-child {
   width: 11.4rem;
   height: 1.2rem;
-  padding-left: 0.4rem;
+  padding-left: 0.5rem;
   font-size: 0.52rem;
   border-radius: 0.6rem;
+  float: left;
   background-color: #f1f1f1;
 }
 .mm-header .search input:last-child {
   width: 2.5rem;
   height: 1.2rem;
+  float: left;
+  margin-left: 0.2rem;
   border-radius: 0.6rem;
   background-color: #ff841d;
 }
@@ -329,7 +332,7 @@ button {
   height: 0.6rem;
 }
 .mm-footer .bottom {
-  height: 130px;
+  height: 2.6rem;
   text-align: center;
   font-size: 0.48rem;
   padding-top: 0.5rem;
@@ -363,6 +366,74 @@ button {
   position: absolute;
   right: 0.4rem;
   top: 0.3rem;
+}
+/* 商品列表区域公共样式 */
+.mm-product {
+  width: 100%;
+  background-color: #fff;
+}
+.mm-product li {
+  width: 100%;
+  height: 5.2rem;
+  padding: 0.2rem 0.4rem;
+  border-bottom: 0.02rem solid #ccc;
+}
+.mm-product li:last-child {
+  border: none;
+}
+.mm-product li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding-left: 4.2rem;
+  position: relative;
+}
+.mm-product li a .left {
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  left: 0;
+  top: 0.4rem;
+}
+.mm-product li a .right {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.mm-product li a .right .right-title {
+  font-size: 0.56rem;
+  color: #000;
+}
+.mm-product li a .right .right-title span {
+  color: #ff841d;
+}
+.mm-product li a .right .right-footer {
+  width: 100%;
+  height: 1.6rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+/* 分页部分公共样式 */
+.main-pagination {
+  width: 100%;
+  height: 2rem;
+  padding: 0.4rem;
+  font-size: 0.48rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.main-pagination button {
+  width: 3.2rem;
+  height: 1.2rem;
+  background-image: linear-gradient(to bottom, #fff, #ccc);
+  border-radius: 0.2rem;
+  box-shadow: 0.02rem 0.02rem 0.02rem 0.02rem #666;
+}
+.main-pagination #select {
+  width: 3.2rem;
+  height: 1.2rem;
+  padding-left: 0.8rem;
 }
 /* 商品详情 */
 .main-defult {
@@ -399,16 +470,16 @@ button {
 .main-defult .center {
   width: 100%;
   height: 1.32rem;
-  border-top: 1px solid #ff841d;
-  border-bottom: 1px solid #ff841d;
+  border-top: 0.02rem solid #ff841d;
+  border-bottom: 0.02rem solid #ff841d;
 }
 .main-defult .center li {
   width: 33.33333333%;
   float: left;
 }
 .main-defult .center li:nth-child(2) {
-  border-left: 1px solid #ff841d;
-  border-right: 1px solid #ff841d;
+  border-left: 0.02rem solid #ff841d;
+  border-right: 0.02rem solid #ff841d;
 }
 .main-defult .center li:first-child {
   background-color: #ff9d1c;
@@ -430,7 +501,7 @@ button {
   line-height: 1.8rem;
   padding: 0 0.2rem;
   font-size: 0.6rem;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 0.02rem solid #ccc;
 }
 .main-defult .bottom .info img {
   float: left;
@@ -461,7 +532,7 @@ button {
 .main-defult .bottom .tips {
   height: 2.4rem;
   padding-top: 0.2rem;
-  padding-left: 20px;
+  padding-left: 0.4rem;
   border-bottom: 0.1rem solid #666;
 }
 .main-defult .bottom .tips p {
@@ -479,7 +550,7 @@ button {
 .main-comment .content .info {
   padding: 0.4rem;
   font-size: 0.44rem;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 0.02rem solid #ccc;
   background-color: #fff;
 }
 .main-comment .content .info p:nth-child(1) {
@@ -496,12 +567,12 @@ button {
   line-height: 0.8rem;
   text-indent: 2em;
 }
-.main-comment .content .more {
+.main-comment .more {
   width: 14.2rem;
   height: 1.2rem;
   display: block;
   font-size: 0.6rem;
   margin: 0.4rem auto;
-  border-radius: 20px;
-  box-shadow: 1px 1px 1px 1px #666;
+  border-radius: 0.4rem;
+  box-shadow: 0.02rem 0.02rem 0.02rem 0.02rem #666;
 }

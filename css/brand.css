@@ -435,57 +435,179 @@ button {
   height: 1.2rem;
   padding-left: 0.8rem;
 }
-/* 菜单导航区域 */
-.mm-nav {
-  width: 100%;
-  margin-top: 0.4rem;
-  padding-bottom: 0.4rem;
-  padding-top: 0.2rem;
+.mm-main {
   background-color: #fff;
+  padding-bottom: 1rem;
 }
-.mm-nav li {
-  width: 25%;
-  float: left;
-  padding-top: 0.4rem;
+/* 主题头部样式 */
+.main-nav {
+  height: 1.5rem;
+  line-height: 1.5rem;
+  border-top: 0.02rem solid #ccc;
+  border-bottom: 0.02rem solid #ccc;
+  font-size: 0.6rem;
+  background-image: linear-gradient(to bottom, #fff, #ddd);
 }
-.mm-nav li a {
+.main-nav a {
+  color: #000;
+}
+/* 主题标题样式 */
+.main-title {
+  height: 1.5rem;
+  line-height: 1.5rem;
+  padding-left: 0.4rem;
+  border: 0.02rem solid #ccc;
+  background-color: #eee;
+  font-size: 0.6rem;
+  color: #ff841d;
+}
+/* 主题品牌排行样式 */
+.main-brand li {
+  width: 100%;
+  height: 2.6rem;
+  padding: 0.4rem;
+  border-bottom: 0.02rem solid #ccc;
+}
+.main-brand li a {
   width: 100%;
   display: block;
-}
-.mm-nav li a img {
-  width: 2rem;
   height: 2rem;
-  margin: 0.2rem auto;
-}
-.mm-nav li a p {
-  font-style: 0.48rem;
-  text-align: center;
-  font-size: 0.48rem;
-}
-/* 折扣商品区域 */
-.mm-recommend {
-  width: 100%;
-  margin-top: 0.2rem;
-}
-.mm-recommend .head,
-.mm-recommend .bottom {
-  height: 1.4rem;
-  background-color: #ff841d;
   position: relative;
+  padding-left: 1.2rem;
 }
-.mm-recommend .head h3,
-.mm-recommend .bottom h3 {
-  line-height: 1.4rem;
-  padding-left: 0.4rem;
-  font-size: 0.6rem;
-  font-weight: normal;
-  color: #fff;
-}
-.mm-recommend .head img,
-.mm-recommend .bottom img {
+.main-brand li a .left {
   width: 0.8rem;
   height: 0.8rem;
+  line-height: 0.8rem;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.48rem;
+  background-color: #c9c9c9;
   position: absolute;
-  right: 0.4rem;
-  top: 0.3rem;
+  left: 0;
+  top: 0;
+}
+.main-brand li a .right {
+  width: 100%;
+  height: 1.8rem;
+  line-height: 0.9rem;
+}
+.main-brand li a .right p:first-child {
+  font-size: 0.6rem;
+  color: #000;
+}
+.main-brand li a .right p:last-child {
+  font-size: 0.48rem;
+  color: #666;
+}
+.main-brand li a img {
+  width: 0.7rem;
+  height: 0.7rem;
+  position: absolute;
+  right: 0;
+  top: 0.6rem;
+}
+/* 主题销量排行样式 */
+.main-sell li {
+  width: 100%;
+  height: 4.8rem;
+  padding: 0.4rem;
+}
+.main-sell li a {
+  width: 100%;
+  height: 2rem;
+  display: block;
+  position: relative;
+  padding-left: 4.4rem;
+}
+.main-sell li a .left {
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.main-sell li a .left img {
+  width: 100%;
+  height: 100%;
+}
+.main-sell li a .right {
+  width: 100%;
+  height: 100%;
+}
+.main-sell li a .right p:nth-child(1) {
+  color: #000;
+  font-size: 0.48rem;
+  line-height: 1rem;
+}
+.main-sell li a .right p:nth-child(2) {
+  color: #ff841d;
+  font-size: 0.56rem;
+  line-height: 1.2rem;
+}
+.main-sell li a .right p:nth-child(3) {
+  color: #666;
+  font-size: 0.4rem;
+}
+.main-sell li a .right p:nth-child(3) span {
+  padding-right: 0.4rem;
+}
+/* 主题评论样式 */
+.main-comment {
+  padding: 0.4rem;
+}
+.main-comment .top {
+  width: 100%;
+  height: 4rem;
+  position: relative;
+  padding-left: 4.4rem;
+  padding-top: 0.4rem;
+}
+.main-comment .top img {
+  width: 4rem;
+  height: 4rem;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.main-comment .top p {
+  width: 100%;
+  font-size: 0.52rem;
+  color: #666;
+}
+.main-comment .comment {
+  padding: 0.4rem;
+  border: 0.02rem solid #ccc;
+  position: relative;
+}
+.main-comment .comment::before {
+  content: '';
+  width: 0.6rem;
+  height: 0.6rem;
+  border-left: 0.02rem solid #ccc;
+  border-top: 0.02rem solid #ccc;
+  background: #fff;
+  position: absolute;
+  left: 1rem;
+  top: -0.34rem;
+  transform: rotate(45deg);
+}
+.main-comment .comment p:nth-child(1) {
+  height: 1.2rem;
+  font-size: 0.4rem;
+  line-height: 1.2rem;
+  color: #666;
+}
+.main-comment .comment p:nth-child(1) span:first-child {
+  float: left;
+}
+.main-comment .comment p:nth-child(1) span:last-child {
+  float: right;
+}
+.main-comment .comment p:nth-child(2) {
+  line-height: 0.9rem;
+  font-size: 0.52rem;
+  color: #000;
 }

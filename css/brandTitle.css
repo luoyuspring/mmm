@@ -435,57 +435,64 @@ button {
   height: 1.2rem;
   padding-left: 0.8rem;
 }
-/* 菜单导航区域 */
-.mm-nav {
-  width: 100%;
-  margin-top: 0.4rem;
-  padding-bottom: 0.4rem;
-  padding-top: 0.2rem;
+.mm-main {
   background-color: #fff;
+  padding-bottom: 1rem;
 }
-.mm-nav li {
-  width: 25%;
-  float: left;
-  padding-top: 0.4rem;
+/* 主题头部样式 */
+.main-nav {
+  height: 1.5rem;
+  line-height: 1.5rem;
+  border-top: 0.02rem solid #ccc;
+  border-bottom: 0.02rem solid #ccc;
+  font-size: 0.6rem;
+  background-image: linear-gradient(to bottom, #fff, #ddd);
 }
-.mm-nav li a {
+.main-nav a {
+  color: #000;
+}
+/* 主题标题样式 */
+.main-title {
+  width: 95%;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  padding-left: 0.4rem;
+  margin: 0.4rem auto;
+  border: 0.02rem solid #ccc;
+  background-color: #eee;
+  font-size: 0.6rem;
+  color: #ff841d;
+}
+/* 主题分类信息样式 */
+.main-list {
   width: 100%;
+  border-radius: 0.2rem;
+  border: 0.02rem solid #ccc;
+  overflow: hidden;
+  background-color: #eee;
+}
+.main-list li {
+  width: 100%;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  border-bottom: 0.02rem solid #ccc;
+}
+.main-list li:last-child {
+  border: none;
+}
+.main-list li a {
   display: block;
-}
-.mm-nav li a img {
-  width: 2rem;
-  height: 2rem;
-  margin: 0.2rem auto;
-}
-.mm-nav li a p {
-  font-style: 0.48rem;
-  text-align: center;
-  font-size: 0.48rem;
-}
-/* 折扣商品区域 */
-.mm-recommend {
   width: 100%;
-  margin-top: 0.2rem;
-}
-.mm-recommend .head,
-.mm-recommend .bottom {
-  height: 1.4rem;
-  background-color: #ff841d;
+  height: 100%;
+  font-size: 0.6rem;
+  font-weight: bold;
+  padding-left: 0.7rem;
   position: relative;
 }
-.mm-recommend .head h3,
-.mm-recommend .bottom h3 {
-  line-height: 1.4rem;
-  padding-left: 0.4rem;
-  font-size: 0.6rem;
-  font-weight: normal;
-  color: #fff;
-}
-.mm-recommend .head img,
-.mm-recommend .bottom img {
-  width: 0.8rem;
-  height: 0.8rem;
+.main-list li a img {
+  width: 0.6rem;
+  height: 0.14rem;
   position: absolute;
-  right: 0.4rem;
-  top: 0.3rem;
+  top: 0.7rem;
+  right: 0.7rem;
 }

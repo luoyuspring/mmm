@@ -1,0 +1,72 @@
+@charset 'utf-8';
+
+@import 'common.less';
+
+.mm-main {
+  background-color: #fff;
+  padding-bottom: 1rem;
+}
+
+/* 主题头部样式 */
+.main-nav {
+  height: 1.5rem;
+  line-height: 1.5rem;
+  border-top: 0.02rem solid @mmBorder;
+  border-bottom: 0.02rem solid @mmBorder;
+  font-size: 0.6rem;
+  background-image: linear-gradient(to bottom, #fff, #ddd);
+
+  a {
+    color: #000;
+  }
+}
+
+/* 主题标题样式 */
+.main-title {
+  width: 95%;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  padding-left: 0.4rem;
+  margin: 0.4rem auto;
+  border: 0.02rem solid @mmBorder;
+  background-color: #eee;
+  font-size: 0.6rem;
+  color: @mmColor;
+}
+
+/* 主题分类信息样式 */
+.main-list {
+  width: 100%;
+  border-radius: 0.2rem;
+  border: 0.02rem solid @mmBorder;
+  overflow: hidden;
+  background-color: #eee;
+  
+  li {
+    width: 100%;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    border-bottom: 0.02rem solid @mmBorder;
+    &:last-child {
+      border: none;
+    }
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      font-size: 0.6rem;
+      font-weight: bold;
+      padding-left: 0.7rem;
+      position: relative;
+
+      img {
+        width: 0.6rem;
+        height: 0.14rem;
+        position: absolute;
+        top: 0.7rem;
+        right: 0.7rem;
+      }
+    }
+  }
+}

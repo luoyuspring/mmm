@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./lib/Awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/couponproduct.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- 头部区域 -->
+    <div class="mm-header">
+      <div class="left">
+        <a href="javascript:history.go(-1);">
+          <img src="./images/right.svg" alt="">
+        </a>
+      </div>
+      <div class="center">
+        <p></p>
+      </div> 
+      <div class="right"> 
+        <a href="javascript:;">
+          <img src="./images/header_app.png" alt="">
+        </a>
+      </div>
+    </div>
+
+    <!-- 主题内容部分 -->
+    <div class="mm-main">
+      <div class="info">--点餐前出示手机中的优惠券，即可享受优惠--</div>
+      <ul class="clearfix">
+        <!-- 优惠券信息列表 -->
+      </ul>
+    </div>
+
+    <!-- 底部区域 -->
+    <div class="mm-footer">
+      <div class="top">
+        <ul class="clearfix">
+          <li><a href="javascript:;">登录</a></li>
+          <li><a href="javascript:;">注册</a></li>
+          <li><a id="back" href="javascript:;"><img src="./images/top.jpg" alt="">返回顶部</a></li>
+        </ul>
+      </div>
+      <div class="bottom">
+        <p>
+          <a href="">手机APP下载</a>
+          <a href="">慢慢买手机版</a>
+          --掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- 模态框 -->
+  <div id="modal">
+      <div class="wrapper">
+        <ul> 
+          <!-- 轮播图片 -->
+        </ul>
+      </div>
+    </div>
+
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/artTemplate/template.js"></script>
+  <script src="./lib/iscroll.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/couponproduct.js"></script>
+
+  <!-- 设置主题内容模板 -->
+  <script type="text/html" id="tpl">
+    {{ each result as v i }}
+      <li>
+        <a data-index="{{ i }}" href="javascript:;">
+          <div class="left">
+            {{ #v.couponProductImg }}
+          </div>
+          <div class="right">
+            <p>{{ v.couponProductName }}</p>
+            <p>{{ v.couponProductPrice }}</p>
+            <p>{{ v.couponProductTime }}</p>
+          </div>
+        </a>
+      </li>
+    {{ /each }}
+  </script>
+
+  <!-- 设置模态框模板 -->
+  <script type="text/html" id="modalTpl">
+    {{ each arr as v i }}
+      <li>
+        <a href="Javascript:;">
+          {{ #v }}
+        </a>
+      </li>
+    {{ /each }}
+  </script>
+ 
+</body>
+</html>

@@ -1,4 +1,4 @@
-$(function () {
+// $(function () {
 
   // 功能一: 定义rem根字体大小
   var base = 50;
@@ -24,7 +24,7 @@ $(function () {
     }, 500)
   })
 
-});
+// });
 
 // 功能三: 解析地址栏字符串方法封装
 function getSearch(name) {

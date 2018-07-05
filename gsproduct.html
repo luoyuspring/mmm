@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./lib/Awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/gsproduct.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- 头部区域 -->
+    <div class="mm-header">
+      <div class="left">
+        <a href="javascript:history.go(-1);">
+          <img src="./images/right.svg" alt="">
+        </a>
+      </div>
+      <div class="center">
+        <p>凑单品</p>
+      </div> 
+      <div class="right"> 
+        <a href="javascript:;">
+          <img src="./images/header_app.png" alt="">
+        </a>
+      </div>
+    </div>
+
+    <!-- 主题内容部分 -->
+    <div class="mm-main">
+      <!-- 导航区域 -->
+      <div class="main-title">
+        <div class="nav">
+          <ul>
+            <li class="nav-shop">
+              <span>京东</span>
+              <span></span>
+            </li>
+            <li class="nav-area">
+              <span>华北</span>
+              <span></span>
+            </li>
+            <li>
+              <span>全部价格</span>
+              <span></span>
+            </li>
+          </ul>
+        </div>
+        <div class="search">
+          <img src="./images/search.svg" alt="">
+        </div>
+        <!-- 店铺列表 -->
+        <ul class="shop">
+          <!-- 店铺 -->
+        </ul>
+
+        <!-- 地区列表 -->
+        <ul class="area">
+          <!-- 地区 -->
+        </ul>
+      </div>
+      <!-- 商品列表区域 -->
+      <div class="main-list">
+        <ul class="clearfix">
+          <!-- 商品 -->
+        </ul>
+      </div>
+    </div>
+
+    <!-- 底部区域 -->
+    <div class="mm-footer">
+      <div class="top">
+        <ul class="clearfix">
+          <li><a href="javascript:;">登录</a></li>
+          <li><a href="javascript:;">注册</a></li>
+          <li><a id="back" href="javascript:;"><img src="./images/top.jpg" alt="">返回顶部</a></li>
+        </ul>
+      </div>
+      <div class="bottom">
+        <p>
+          <a href="">手机APP下载</a>
+          <a href="">慢慢买手机版</a>
+          --掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+      </div>
+    </div>
+
+  </div>
+
+
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/artTemplate/template.js"></script>
+  <script src="./lib/iscroll.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/gsproduct.js"></script>
+
+  <!-- 设置店铺模板 -->
+  <script type="text/html" id="shopTpl">
+    {{ each result as v i }}
+      <li><a class="{{ i === 0 ? 'current' : '' }}" data-id="{{ v.shopId }}" href="javascript:;">{{ v.shopName }}</a></li>
+    {{ /each }}
+  </script>
+
+  <!-- 设置地区模板 -->
+  <script type="text/html" id="areaTpl">
+    {{ each result as v i }}
+      <li><a class="{{ i === 0 ? 'current' : '' }}" data-id="{{ v.areaId }}" href="javascript:;">{{ v.areaName }}</a></li>
+    {{ /each }}
+  </script>
+
+  <!-- 设置商品模板 -->
+  <script type="text/html" id="productTpl">
+    {{ each result as v i }}
+      <li>
+        <a href="javascript:;">
+          <img src="{{ v.productImg }}">
+          <p class="mm-one">{{ v.productName }}</p>
+          <p>{{ v.productPrice }}</p>
+          <button>去凑单</button>
+        </a>
+      </li>
+    {{ /each }}
+  </script>
+ 
+</body>
+</html>

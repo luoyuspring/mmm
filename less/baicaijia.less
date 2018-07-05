@@ -1,0 +1,169 @@
+@charset 'utf-8';
+
+@import 'moneyctrl.less';
+
+.mm-header {
+  background-color: #f4483e;
+}
+
+/* 主题内容区域样式 */
+/* tab栏样式 */
+.main-title {
+  height: 1.6rem;
+  padding-right: 1.6rem;
+  background-color: #fff;
+  position: relative;
+
+  .tab {
+    height: 1.6rem;
+    width: 100%;
+    overflow: hidden;
+
+    ul {
+      width: 20rem;
+
+      li {
+        height: 1.6rem;
+        padding: 0.1rem 0.5rem;
+        float: left;
+
+        a {
+          height: 100%;
+          font-size: 0.6rem;
+          padding: 0.2rem;
+          display: block;
+        }
+        &.current {
+          a {
+            color: #f4483e;
+            border-bottom: 0.06rem solid #f4483e;
+          }
+        }
+      }
+    }
+  }
+  .search {
+    width: 1.6rem;
+    height: 1.6rem;
+    padding-top: 0.3rem;
+    padding-left: 0.3rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    img {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+  
+}
+
+/* 商品列表样式 */
+.main-content {
+  li {
+    width: 100%;
+    height: 6rem;
+    padding: 0.4rem 0.2rem;
+    padding-left: 5.4rem;
+    margin-top: 0.2rem;
+    background-color: #fff;
+    position: relative;
+
+    .left {
+      width: 5rem;
+      height: 5rem;
+      position: absolute;
+      left: 0.2rem;
+      top: 0.4rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .right {
+      width: 100%;
+      height: 100%;
+
+      .name {
+        line-height: 0.8rem;
+        font-size: 0.56rem;
+        color: #000;
+      }
+      .price {
+        padding-top: 0.2rem;
+        font-size: 0.56rem;
+        color: red;
+
+        del {
+          padding-left: 0.4rem;
+          color: #ccc;
+        }
+      }
+      .couponRemain {
+        padding: 0.2rem 0;
+
+        i {
+          width: 2.4rem;
+          height: 0.6rem;
+          display: inline-block;
+          border-radius: 0.3rem;
+          background-color: #ffb8b8;
+          border: 0.02rem solid red;
+          position: relative;
+          overflow: hidden;
+          vertical-align: bottom;
+
+          em {
+            height: 100%;
+            display: block;
+            background-color: red;
+            border-radius: 0.3rem;
+          }
+          span {
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+          }
+        }
+        b {
+          font-weight: normal;
+          padding-left: 0.4rem;
+          font-size: 0.5rem;
+          color: red;
+        }
+      }
+      .coupon {
+        float: left;
+        width: 4.28rem;
+        height: 1rem;
+        margin-top: 0.4rem;
+        line-height: 1rem;
+        text-align: center;
+        font-size: 0.48rem;
+        border: 0.02rem dashed red;
+
+        a {
+          color: red;
+        }
+      }
+      .href {
+        float: right;
+        width: 2.4rem;
+        height: 1.1rem;
+        text-align: center;
+        margin-top: 0.4rem;
+        line-height: 1.1rem;
+        border-radius: 0.2rem;
+        background-color: #ff5e5d;
+
+        a {
+          font-size: 0.48rem;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

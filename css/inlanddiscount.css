@@ -435,57 +435,81 @@ button {
   height: 1.2rem;
   padding-left: 0.8rem;
 }
-/* 菜单导航区域 */
-.mm-nav {
+.mm-header {
   width: 100%;
-  margin-top: 0.4rem;
-  padding-bottom: 0.4rem;
-  padding-top: 0.2rem;
-  background-color: #fff;
-}
-.mm-nav li {
-  width: 25%;
-  float: left;
-  padding-top: 0.4rem;
-}
-.mm-nav li a {
-  width: 100%;
-  display: block;
-}
-.mm-nav li a img {
-  width: 2rem;
   height: 2rem;
-  margin: 0.2rem auto;
-}
-.mm-nav li a p {
-  font-style: 0.48rem;
-  text-align: center;
-  font-size: 0.48rem;
-}
-/* 折扣商品区域 */
-.mm-recommend {
-  width: 100%;
-  margin-top: 0.2rem;
-}
-.mm-recommend .head,
-.mm-recommend .bottom {
-  height: 1.4rem;
   background-color: #ff841d;
+  padding: 0 2rem;
   position: relative;
 }
-.mm-recommend .head h3,
-.mm-recommend .bottom h3 {
-  line-height: 1.4rem;
-  padding-left: 0.4rem;
-  font-size: 0.6rem;
-  font-weight: normal;
-  color: #fff;
+.mm-header .left {
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
-.mm-recommend .head img,
-.mm-recommend .bottom img {
+.mm-header .left img {
   width: 0.8rem;
   height: 0.8rem;
+  margin-top: 0.6rem;
+  display: inline-block;
+}
+.mm-header .center {
+  line-height: 2rem;
+  font-size: 0.8rem;
+  text-align: center;
+  color: #fff;
+}
+.mm-header .right {
+  width: 2rem;
+  height: 2rem;
   position: absolute;
-  right: 0.4rem;
-  top: 0.3rem;
+  right: 0;
+  top: 0;
+}
+.mm-header .right img {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-top: 0.4rem;
+  margin-left: 0.4rem;
+}
+.mm-main {
+  background-color: #fff;
+}
+.mm-main li {
+  width: 50%;
+  float: left;
+  padding: 0 0.6rem;
+  border-right: 0.02rem solid #ccc;
+  border-bottom: 0.02rem solid #ccc;
+}
+.mm-main li:nth-child(2n) {
+  border-right: none;
+}
+.mm-main li a {
+  display: block;
+}
+.mm-main li a img {
+  width: 5rem;
+  height: 5rem;
+  margin: 0.8rem auto;
+}
+.mm-main li a p:nth-child(2) {
+  font-size: 0.52rem;
+  color: #000;
+  height: 1.6rem;
+  line-height: 0.8rem;
+  font-weight: bold;
+}
+.mm-main li a p:nth-child(3) {
+  font-size: 0.52rem;
+  color: #ff841d;
+  line-height: 1rem;
+}
+.mm-main li a p:nth-child(4) {
+  font-size: 0.44rem;
+  color: #666;
+  line-height: 1.6rem;
 }

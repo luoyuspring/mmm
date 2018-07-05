@@ -1,0 +1,134 @@
+@charset 'utf-8';
+
+@import 'moneyctrl.less';
+
+.mm-main {
+
+  /* 主题头部导航区域 */
+  .main-title {
+    height: 1.6rem;
+    padding-right: 1.6rem;
+    border-bottom: 0.02rem solid @mmBorder;
+    position: relative;
+    background-color: #fff;
+
+    .nav {
+      width: 100%;
+      height: 1.6rem;
+
+      li {
+        width: 100% / 3;
+        height: 1.6rem;
+        padding-top: 0.4rem;
+        text-align: center;
+        float: left;
+        font-size: 0.6rem;
+
+        span:last-child {
+          width: 1rem;
+          height: 1rem;
+          vertical-align: middle;
+          display: inline-block;
+          background: url("../images/top.svg") no-repeat center;
+          background-size: contain;
+        }
+      }
+    }
+    .search {
+      width: 1.6rem;
+      height: 1.6rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      img {
+        width: 60%;
+        height: 60%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .shop,
+    .area {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 1.6rem;
+      z-index: 999;
+      background-color: #fff;
+
+      li {
+        width: 100%;
+        height: 1.6rem;
+        border-bottom: 0.02rem solid @mmBorder;
+
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          font-size: 0.48rem;
+          padding-left: 0.4rem;
+          line-height: 1.6rem;
+
+          &.current {
+            background-color: skyblue;
+          }
+        }
+      }
+    }
+  }
+
+  /* 主题商品展示区域 */
+  .main-list {
+    padding: 0.3rem;
+
+    li {
+      width: 7rem;
+      height: 9rem;
+      float: left;
+      padding: 0.2rem;
+      background-color: #fff;
+      margin-right: 0.3rem;
+      margin-bottom: 0.3rem;
+      position: relative;
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+
+      a {
+        width: 100%;
+        height: 100%;
+        display: block;
+
+        img {
+          width: 6.6rem;
+          height: 6.6rem;
+        }
+        p:nth-child(2) {
+          font-size: 0.48rem;
+          line-height: 0.8rem;
+          color: #000;
+        }
+        p:nth-child(3) {
+          font-size: 0.56rem;
+          line-height: 1.2rem;
+          color: @mmColor;
+        }
+        button:nth-child(4) {
+          width: 2.4rem;
+          height: 1rem;
+          font-size: 0.48rem;
+          color: #fff;
+          border-radius: 0.2rem;
+          background-color: @mmColor;
+          position: absolute;
+          right: 0.2rem;
+          bottom: 0.2rem;
+        }
+      }
+    }
+  }
+  
+}

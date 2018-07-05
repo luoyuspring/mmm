@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./lib/Awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/sitenav.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- 头部区域 -->
+    <div class="mm-header">
+      <div class="left">
+        <a href="javascript:history.go(-1);">
+          <img src="./images/right.svg" alt="">
+        </a>
+      </div>
+      <div class="center">
+        <p>商场导航</p>
+      </div> 
+      <div class="right"> 
+        <a href="javascript:;">
+          <img src="./images/header_app.png" alt="">
+        </a>
+      </div>
+    </div>
+
+    <!-- 主题内容部分 -->
+    <div class="mm-main">
+      <ul class="clearfix">
+        <!-- 导航信息 -->
+      </ul>
+    </div>
+
+    <!-- 底部区域 -->
+    <div class="mm-footer">
+      <div class="top">
+        <ul class="clearfix">
+          <li><a href="javascript:;">登录</a></li>
+          <li><a href="javascript:;">注册</a></li>
+          <li><a id="back" href="javascript:;"><img src="./images/top.jpg" alt="">返回顶部</a></li>
+        </ul>
+      </div>
+      <div class="bottom">
+        <p>
+          <a href="">手机APP下载</a>
+          <a href="">慢慢买手机版</a>
+          --掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+      </div>
+    </div>
+
+  </div>
+
+
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/artTemplate/template.js"></script>
+  <script src="./lib/iscroll.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/sitenav.js"></script>
+
+  <!-- 设置店铺模板 -->
+  <script type="text/html" id="navTpl">
+    {{ each result as v i }}
+      <li>
+        <a href="{{ v.navHref }}">
+          <img src="{{ v.navImg }}" alt="">
+          <span>{{ v.navTitle }}</span>
+        </a>
+      </li>
+    {{ /each }}
+  </script>
+ 
+</body>
+</html>

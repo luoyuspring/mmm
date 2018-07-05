@@ -1,0 +1,46 @@
+@charset 'utf-8';
+
+@import 'moneyctrl.less';
+
+.mm-main {
+  background-color: #fff;
+
+  li {
+    width: 50%;
+    float: left;
+    padding: 0 0.6rem;
+    border-right: 0.02rem solid @mmBorder;
+    border-bottom: 0.02rem solid @mmBorder;
+    &:nth-child(2n) {
+      border-right: none;
+    }
+
+    a {
+      display: block;
+
+      img {
+        width: 5rem;
+        height: 5rem;
+        margin: 0.8rem auto;
+      }
+      p:nth-child(2) {
+        font-size: 0.52rem;
+        color: #000;
+        height: 1.6rem;
+        line-height: 0.8rem;
+        font-weight: bold;
+      }
+      p:nth-child(3) {
+        font-size: 0.52rem;
+        color: @mmColor;
+        line-height: 1rem;
+      }
+      p:nth-child(4) {
+        font-size: 0.44rem;
+        color: #666;
+        line-height: 1.6rem;
+      }
+    }
+  }
+}
+
